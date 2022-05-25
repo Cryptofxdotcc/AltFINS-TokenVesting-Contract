@@ -12,7 +12,7 @@ contract Altfins  {
     mapping (address => mapping (address => uint256)) public allowance;
 
     event Transfer(address indexed from, address indexed to, uint256 amount);
-    constructor() {
+    constructor() public {
         balanceOf[msg.sender] = totalSupply;
         emit Transfer(address(0), msg.sender, totalSupply);
     }
